@@ -1,0 +1,62 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: Gothan Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255 , 255, .75);
+
+}
+.calculator-grid > button:hover{
+  background-color: rgba(255, 255 , 255, .9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  background-color: black;
+  /*rgba(0,0,0.75); flex make them continue with the same height width
+    flex-end make them move to bottom of the div which height is fit with the text
+    space between make space between them
+    flex direction column make them arrange column one in row one column 2 in row 2 each content consider 1 columns
+    by default is row make them continue from each other
+    word-wrap getting too long allow to break the word not the middle of the word can exceeding the bounce container
+    word-break wrap to the next line if two long middle of the word can ma line1 ke line 2 never exceeding the bounce container*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+
+}
+.output .previous-operand {
+  color: rgba(225, 255, 255, .75);
+  font-size: 1.5rem;
+
+}
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
