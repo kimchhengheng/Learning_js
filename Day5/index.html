@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="image">
+        <div><img src="./img/images.png" class="one" ></div>
+        <div><img src="./img/images (1).png" class="two"></div> 
+        <div><img src="./img/images (2).jpg" class="three"></div>
+        <div><img src="./img/Music-Icon.png" class="four"></div>
+    </div>
+    <audio class="myaudio" src="./sounds/2NE1 - LONELY.mp3">
+    <audio class="myaudio" src="./sounds/2NE1 -I AM THE BEST .mp3"></audio>
+    <audio class="myaudio" src="./sounds/2NE1 – Try To Follow Me.mp3"></audio>
+    <audio class="myaudio" src="./sounds/2NE1_-_Clap_Your_Hands.mp3"></audio>
+
+    </audio>
+    <header>The touch pad</header>
+    <div class="app">
+        
+        <div class="btn-contatiner" id="pad-key">
+            <button class="btn" id="1" onclick="toggleplay(this.id)">Lonely</button>
+            <button class="btn" id="2" onclick="toggleplay(this.id)" >I am the best</button>
+            <button class="btn" id="3" onclick="toggleplay(this.id)">Try to follow me</button>
+            <button class="btn" id="4" onclick="toggleplay(this.id)">Clap your hands</button>
+        </div>
+        
+    </div>
+    <script >
+        const myaudio = document.getElementsByClassName('myaudio')
+        function toggleplay(ind){
+            
+            if(myaudio[ind-1].paused){
+                myaudio[ind-1].play()
+            }
+            else{
+                myaudio[ind-1].pause()
+            }
+        }
+    </script>
+</body>
+</html>
