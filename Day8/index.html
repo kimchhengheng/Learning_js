@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div id ="decimal" class="decdis">From decimal to other
+            <div id='input'>Input</div>
+            <div id="btn">
+                <button id="2" class="base"  onclick="displayfromdeci(this.id)">binary</button>
+                <button id="8" class="base" onclick="displayfromdeci(this.id)">octal</button>
+                <button id="16" class="base" onclick="displayfromdeci(this.id)">hexadecimal</button>
+            </div>
+            <div id="display">
+                Answer
+            </div>
+        </div>
+        <div id="todecimal">From other to decimal
+            <div id='input2'>Input</div>
+            <div id="btn2">
+                <button id="bin" class="base2"  onclick="displaytodeci(this.id)">binary</button>
+                <button id="oct" class="base2" onclick="displaytodeci(this.id)">octal</button>
+                <button id="hex" class="base2" onclick="displaytodeci(this.id)">hexadecimal</button>
+            </div>
+            <div id="display2">
+                Answer
+            </div>
+        </div>
+        <div>
+            <button id="toggle" onclick="toggledisplay()">Toggle converter</button>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
