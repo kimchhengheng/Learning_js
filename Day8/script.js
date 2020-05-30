@@ -54,7 +54,7 @@ function displaytodeci(num){
             output = Number.parseInt(input, 2)
             while(isNaN(output)){
                 alert("number does not exit in binary")
-                getinput()
+                input  = prompt('what number you want to convert')
                 output = Number.parseInt(input, 2)
             }
             inval2.innerHTML = `<strong>The input value in binary is : </strong> ${input}`
@@ -64,7 +64,7 @@ function displaytodeci(num){
             output = Number.parseInt(input, 8)
             while(isNaN(output)){
                 alert("number does not exit octal")
-                getinput()
+                input  = prompt('what number you want to convert')
                 output = Number.parseInt(input, 8)
             }
             inval2.innerHTML = `<strong>The input value in octal is : </strong> ${input}`
@@ -74,7 +74,7 @@ function displaytodeci(num){
             output = Number.parseInt(input, 16)
             while(isNaN(output)){
                 alert("number does not exit in hexadecimal")
-                getinput()
+                input  = prompt('what number you want to convert')
                 output = Number.parseInt(input, 16)
             }
             inval2.innerHTML = `<strong>The input value in hexadecimal is : </strong> ${input}`
