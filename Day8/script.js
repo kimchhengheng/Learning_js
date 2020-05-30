@@ -47,7 +47,7 @@ function displayfromdeci(num){
 }
 function displaytodeci(num){
     input = undefined
-    getinput()
+    input  = prompt('what number you want to convert')
     
     switch(num){
         case "bin":
